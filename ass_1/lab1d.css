@@ -1,0 +1,47 @@
+body{
+    margin: 20px;
+    /* background-color: #444; */
+}
+.container{
+    width: 30%;
+    border: 2px solid black;
+    padding: 3px;
+    padding-top: 0;
+    padding-bottom: 3px;
+    border-radius: 10px;
+}
+.header{
+    padding:5px 0;
+    color: blue;
+    background-color: lightgrey;
+    text-align: center;
+    margin: 2px;
+}
+
+.italia{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+}
+
+h2,h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+strong{
+    margin-top: 10px;
+}
+.box{
+   
+    padding: 2px;
+}
+.year{
+    width: 30%;
+    font-weight: bold;
+}
+td{
+    margin : 10px;
+    padding: 10px;
+}

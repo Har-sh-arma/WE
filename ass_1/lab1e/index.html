@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tourist Website Search</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js" integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+        overflow: hidden;
+      }
+
+      form{
+        display: grid;
+        /* place-items:center; */
+        grid-template-rows: repeat(6, 1fr);
+      }
+      input[type="text"] {
+        grid-row:1/2;
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        outline: none;
+        transition: all 0.5s ease-in;
+      }
+
+      input[type="text"]:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 500px;
+      }
+
+      ul {
+        transition: all 0.5s ease-in;
+        grid-row: 2/7 ;
+        width: 500px;
+        display: none;
+        list-style: none;
+        margin: 0; 
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+
+      li {
+        /* padding: 10px; */
+        min-height: 40px;
+        border-bottom: 1px solid #ccc;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      li:hover {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Search...">
+      <ul></ul>
+    </form>
+    <script>
+      const searchInput = document.querySelector('input[type="text"]');
+      const suggestionsList = document.querySelector('ul');
+
+      searchInput.addEventListener('input', () => {
+            const query = searchInput.value;
+        if (query.length > 3) {
+            complete(query)
+            suggestionsList.style.display = 'grid';
+        } else {
+          suggestionsList.innerHTML = '';
+          suggestionsList.style.display = 'none';
+        }
+      });
+
+      document.addEventListener('click', event => {
+        if (!searchInput.contains(event.target)) {
+          suggestionsList.innerHTML = '';
+          suggestionsList.style.display = 'none';
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

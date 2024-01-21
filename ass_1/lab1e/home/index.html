@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paris Tourism</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header{
+            height: 80px;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav li a:hover {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        #banner{
+            background-size:cover;
+            /* width :100vw; */
+            height: 50vh;
+            background-position: center;
+            filter: brightness(0.5);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        main p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Paris Tourism</h1>
+     
+    </header>
+    <nav>
+        <ul>
+            <li><a data-to="home">Home</a></li>
+            <li><a data-to="heritage">Heritage</a></li>
+            <li><a data-to="hotel">Hotel Booking</a></li>
+            <li><a data-to="gallery">Gallery</a></li>
+        </ul>
+    </nav>
+    <div id="banner">
+    </div>
+    <main>
+        <h2>About Paris</h2>
+        <p id ="desc">Paris is the capital and most populous city of France, located on the Seine River in the north of the country. The city of Paris has a population of over 2 million people, while the Paris metropolitan area has a population of over 12 million people. Paris is known for its rich history, stunning architecture, world-class museums, and romantic atmosphere. It is also home to some of the world's most famous landmarks, including the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+    </main>
+    <footer>
+        <p>© 2024 Paris Tourism. All rights reserved.</p>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>
