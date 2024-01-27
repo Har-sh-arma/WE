@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Embed</title>
+    <style>
+        body{
+            height: 95vh;
+            display: grid;
+            place-items: center;
+        }
+        iframe{
+            border-radius: 200px;
+            box-shadow: 20px 30px grey;
+            transition: all 0.85s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <iframe width="702" height="395" src="https://www.youtube.com/embed/_t0qtSKOpO4" title="Chris Brown - Sensational (Official Video) ft. Davido, Lojay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<script>
+    let flag = 0
+    setInterval(()=>{
+        if(flag==0){
+        document.getElementsByTagName("iframe")[0].style.boxShadow = "20px 20px grey";
+        flag=1;
+        }
+        else{
+        document.getElementsByTagName("iframe")[0].style.boxShadow = "20px 30px grey";
+        flag=0;
+        }
+    },1000)
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Vibes</title>
+    <style>
+        body{
+            min-height: 97vh;
+            display: grid;
+            grid-template-rows: 4fr 29fr 2fr;
+            grid-template-columns: 1fr 10fr 1fr;
+            background-color: #A9D7E9;
+        }
+        #head{
+            display: grid;
+            place-items: center;
+            grid-row: 1/2;
+            grid-column: 2/3;
+            font-size: 5vh;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+        #cont{
+            place-items: center;
+            display: grid;
+            grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr 3fr 1.5fr 2fr;
+            grid-template-columns: 1fr;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            background-color: #F3F3F3;
+            border-radius: 2%;
+        }
+        #question{
+            display: grid;
+            place-items: center;
+        }
+        .ipcont{
+            width: 100%;
+            font-size:small;
+            display: grid;
+            grid-template-columns: 30fr 1fr 30fr;
+        }
+        label{
+            grid-column: 1/2;
+            display: grid;
+            justify-content: right;
+            place-items: center;
+        }
+        input{
+            align-self: center;
+            display: grid;
+            grid-column: 3/4;
+            width: 50%;
+            height: fit-content;
+            padding: 5px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+
+        .ipfield{
+            align-self: center;
+            display: grid;
+            grid-column: 3/4;
+            width: 50%;
+            height: fit-content;
+            padding: 5px;
+        }
+
+        .slider{
+            place-items: center;
+            grid-template-columns: 10fr 1fr;
+        }
+
+        .slider input{
+            width: 100%;
+            grid-column: 1/2;
+        }
+        .slider div{
+            display: grid;
+            place-items: center;
+        }
+
+        .radio{
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .radio input{
+            grid-column: 1/2;
+        }
+        .radio label{
+            grid-column: 2/3;
+            justify-content: left;
+        }
+        select{
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        textarea{
+            min-height: 100%;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        #si{
+
+            grid-column: 1/2;
+            background-color: #6BA2CE;
+            color: #F3F3F3;
+            width: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="head"><b>Good Vibes✨ Form</b></div>
+    <div id="cont">
+        <div id="question">Tell us something Positive that happened to you Today</div>
+        <div class="ipcont"><label for="name">Name</label><input type="text" name="name" placeholder="Enter your name"></div>
+        <div class="ipcont"><label for="email">Email</label><input type="text" name="email" placeholder="Enter your email"></div>
+        <div class="ipcont">
+            <label for="gud">On a scale of 1 to 10, how good was it?</label>
+            <div class="ipfield slider">
+                <input type="range" id="gud" name="gud" min="1" max="10" /><div id="value">1</div></div>
+
+        </div>
+        <div class="ipcont">
+            <label for="place">Where did it happen?</label>
+            <select class="ipfield" name="place" id="place">
+                <option value="home">At home</option>
+                <option value="college">At college</option>
+                <option value="temple">At a temple</option>
+                <option value="cafe">At a cafe</option>
+                <option value="club">At a club</option>
+                <option value="else">At some other place</option>
+            </select>
+        
+    </div>
+    <div class="ipcont">
+        <label for="time">At what time of the day did it happen?</label>
+        <div class="ipfield radio">
+            <input name="morning" type="radio"><label for="morning">Morning</label>
+            <input name="noon" type="radio"><label for="noon">Noon</label>
+            <input name="night" type="radio"><label for="night">Night</label>
+        </div>
+
+    </div>
+    <div class="ipcont">
+        <label for="time">What emotions did you experience?</br>(Select all that apply)</label>
+        <div class="ipfield radio">
+            <input name="excited" type="checkbox"><label for="excited">Excited</label>
+            <input name="humbled" type="checkbox"><label for="humbled">Humbled</label>
+            <input name="elated" type="checkbox"><label for="elated">Elated</label>
+            <input name="Loved" type="checkbox"><label for="Loved">Loved</label>
+            <input name="Enthusiastic" type="checkbox"><label for="Enthusiastic">Enthusiastic</label>
+        </div>
+
+    </div>
+    <div class="ipcont">
+        <label for="time">Please describe your positive experience.</label>
+        <textarea class="ipfield radio" placeholder="Enter your positive experience here"></textarea>
+    </div>
+    <input id="si" type="button" value="submit">
+
+    <script>
+        document.getElementById("gud").addEventListener("input", (event)=>{
+                document.getElementById("value").innerText = event.target.value;
+        })
+    </script>
+</body>
+</html>

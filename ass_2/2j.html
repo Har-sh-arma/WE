@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        body{
+            height: 95vh;
+            display: grid;
+            place-items: center;
+            background-color: azure;
+        }
+        #el{
+            display: grid;
+            place-items: center;
+            background-color:antiquewhite;
+            padding:10vh 0 10vh 0;
+            min-width: 40vw;
+            font-size: xx-large;
+            transition: all 1s ease-in-out;
+        }
+        .ry{
+            transform: rotateY(180deg);
+        }
+        .rx{
+            transform: rotateX(180deg);
+        }
+        .rz{
+            transform: rotateZ(180deg);
+        }
+        .sx{
+            transform: scaleX(0.2);
+        }
+        .sy{
+            transform: scaleY(0.2);
+        }
+        .tx{
+            transform: translateX(50vw);
+        }
+        .ty{
+            transform: translateY(50vh);
+        }
+        .tz{
+            transform: translateZ(50vh);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="el">Hello</div>
+    <script>
+
+        let a = ["rx", "rx", "rx", "rx", "ry", "rz", "sx", "sy", "tx", "ty", "tz"]
+        // let a = ["rx", "ry", "rz"]
+        setInterval(()=>{
+            let s = a[Math.round(Math.random()*100) % a.length];
+            if(document.getElementById("el").classList.contains(s)){
+                document.getElementById("el").classList.remove(s)
+            }else{document.getElementById("el").classList.add(s)}
+        }, 1000/a.length)
+    </script>
+</body>
+</html>
